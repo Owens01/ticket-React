@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+# 🌀 Trackit — React Ticket & Task Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Trackit is a responsive, modern ticket and task management interface built with React 18, Vite, Typescript and Tailwind CSS .  
+It provides a seamless experience for creating, tracking, and updating tickets in real-time — all stored locally in the browser for simplicity and speed.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## React Compiler
+###  Landing Page and Dashboard
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A lightweight React single-page interface featuring:
 
-## Expanding the ESLint configuration
+- Clean landing page with hero section and decorative SVGs  
+- Task/Ticket dashboard for managing items  
+- Local state persistence using the browser’s `localStorage`  
+- Modular component structure for scalability  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+###  Functional Ticket Management
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+ this stage adds:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Dynamic Ticket System:** Create, edit, and delete tasks with automatic updates.  
+- **Persistent State:** All tickets are saved using `localStorage`.  
+- **Priority & Status Controls:** Each ticket includes priority levels (`low`, `medium`, `high`) and status options (`open`, `in_progress`, `closed`).  
+- **Reusable Components:** Cards, modals, and UI parts are fully modular.  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## New Features (Stage 1)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+✅ Persistent tickets using local storage  
+✅ Component-based structure with state isolation  
+✅ TypeScript type safety for tickets and UI logic  
+✅ Responsive and accessible layout with Tailwind  
+✅ Lightweight, dependency-efficient build via Vite  
+✅ Inline SVG decorative shapes for scalability and theming  
+✅ Modular CSS file powered by Tailwind layers  
+✅ Configurable store using Pinia-style or Zustand-like logic  
+
+---
+
+## Page Details
+
+### Landing Page
+A responsive entry view containing:
+
+- Hero text introducing TaskTide  
+- Decorative inline SVG shapes overlapping the hero section  
+- Responsive layout using Tailwind’s grid and flex utilities  
+- Optional navigation links for future pages (e.g., Dashboard, About)
+
+---
+
+### Dashboard
+The main interface for managing tickets.
+
+Displays all tickets from `localStorage`, with options to:
+
+| Action | Description |
+|---------|-------------|
+| **Create Ticket** | Adds a new entry with title, description, and priority |
+| **Update Ticket** | Edit title, status, or priority in place |
+| **Delete Ticket** | Removes ticket from the local list |
+| **Auto-Save** | All changes persist immediately |
+
+---
+
+## Frameworks & Libraries Used
+
+| Category | Library | Purpose |
+|-----------|----------|----------|
+| **Frontend Framework** | [React 18](https://react.dev/) | Core component architecture |
+| **Build Tool** | [Vite](https://vitejs.dev/) | Fast bundler and dev server |
+| **Styling Framework** | [Tailwind CSS 4.1.16](https://tailwindcss.com/) | Utility-first CSS framework |
+| **Icons** | [Lucide React](https://lucide.dev/) | Lightweight SVG icons |
+| **Type System** | [TypeScript](https://www.typescriptlang.org/) | Strong typing and intellisense |
+| **Linting/Formatting** | [ESLint + Prettier](https://eslint.org/) | Code quality and consistency |
+
+---
+
+

@@ -27,7 +27,7 @@ export const LandingPage: React.FC<{ onNavigate: (page: string) => void }> = ({
       <Navbar onNavigate={onNavigate} />
 
       {/* Hero section with inline SVG circle and bottom wave */}
-      <section className="relative bg-gradient-to-br from-blue-300 to-blue-800 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-red-100 to-blue-800 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-36 text-center relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Manage Tickets Effortlessly
@@ -39,7 +39,7 @@ export const LandingPage: React.FC<{ onNavigate: (page: string) => void }> = ({
           {/* Inline decorative SVG circle overlapping hero */}
           <div className="flex justify-center mt-12">
             <svg
-              className="w-64 h-64 sm:w-80 sm:h-80 opacity-30 -mt-20"
+              className="w-64 h-64 sm:w-80 sm:h-80 opacity-30 -mt-25"
               viewBox="0 0 200 200"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden
@@ -49,8 +49,14 @@ export const LandingPage: React.FC<{ onNavigate: (page: string) => void }> = ({
                   <stop offset="0%" stopColor="#c4fa60ff" />
                   <stop offset="100%" stopColor="#7c3aed" />
                 </linearGradient>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#c4fa60ff" />
+                  <stop offset="100%" stopColor="#7c3aed" />
+                </linearGradient>
               </defs>
-              <circle cx="100" cy="100" r="100" fill="url(#grad1)" />
+              <circle cx="100" cy="100" r="80" fill="url(#grad1)" />
+              <circle cx="160" cy="120" r="40" fill="url(#grad2)" />
+              <circle cx="50" cy="50" r="50" fill="url(#grad1)" />
             </svg>
           </div>
         </div>
