@@ -1,4 +1,4 @@
-# 🌀 Trackit — React Ticket & Task Management App
+#  Trackit — React Ticket & Task Management App
 
 Trackit is a responsive, modern ticket and task management interface built with React 18, Vite, Typescript and Tailwind CSS .  
 It provides a seamless experience for creating, tracking, and updating tickets in real-time — all stored locally in the browser for simplicity and speed.
